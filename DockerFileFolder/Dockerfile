@@ -1,9 +1,23 @@
+# FROM ubuntu:latest
+
+# WORKDIR /app
+
+# COPY . .
+
+# RUN chmod +x ./wisecow.sh
+
+# CMD ["./wisecow.sh"]
+
 FROM ubuntu:latest
 
-WORKDIR /app
+# Install the necessary dependencies
+RUN apt-get update && apt-get install -y bash
 
-COPY . .
+# Copy the .sh file into the container
+COPY wisecow.sh /
 
-RUN chmod +x ./wisecow.sh
+# Set the working directory
+WORKDIR /
 
-CMD ["./wisecow.sh"]
+# Run the .sh file
+CMD ["/bin/bash", "./wisecow.sh"]
