@@ -16,10 +16,11 @@ RUN apt-get update && apt-get install -y bash && apt install fortune-mod cowsay 
 # sudo apt install fortune-mod cowsay -y
 
 # Copy the .sh file into the container
-COPY wisecow.sh /
+COPY wisecow.sh .
 
 # Set the working directory
 WORKDIR /
 
+EXPOSE 4499
 # Run the .sh file
-CMD ["/bin/bash", "./wisecow.sh"]
+CMD ["./wisecow.sh"]
