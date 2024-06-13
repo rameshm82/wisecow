@@ -1,10 +1,10 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y bash && apt install fortune-mod cowsay -y
+RUN apt install fortune-mod cowsay -y
 
 WORKDIR /app
 
-COPY wisecow.sh /app
+COPY wisecow.sh ./
 
 # COPY . .
 
