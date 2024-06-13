@@ -11,7 +11,9 @@
 FROM ubuntu:latest
 
 # Install the necessary dependencies
-RUN apt-get update && apt-get install -y bash
+RUN apt-get update && apt-get install -y bash && apt install fortune-mod cowsay -y
+
+# sudo apt install fortune-mod cowsay -y
 
 # Copy the .sh file into the container
 COPY wisecow.sh /
