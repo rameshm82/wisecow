@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x ./run.sh
+RUN chmod +x ./wisecow.sh
 
-CMD ["./run.sh"]
+CMD ["./wisecow.sh"]
