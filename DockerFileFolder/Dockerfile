@@ -4,9 +4,9 @@ RUN apt-get update && apt-get install -y bash && apt install fortune-mod cowsay 
 
 WORKDIR /app
 
-COPY wisecow.sh .
+COPY wisecow.sh ./
 
-COPY . .
+# COPY . .
 
 RUN chmod +x ./wisecow.sh
 RUN ls -lrt
