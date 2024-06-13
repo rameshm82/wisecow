@@ -9,6 +9,7 @@ COPY wisecow.sh .
 COPY . .
 
 RUN chmod +x ./wisecow.sh
+RUN ls -lrt
 
 CMD ["./wisecow.sh"]
 
